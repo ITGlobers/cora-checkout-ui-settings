@@ -1,11 +1,93 @@
+/* ----------------------------- Font-families --------------------------------------*/
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 400;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 250;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 275;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 300;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 500;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 600;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 700;
+  src        : local("Montserrat"),
+    url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 800;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style : normal;
+  font-weight: 900;
+  src        : local("Montserrat"),
+    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "cora-icons";
+  src        : url(https://www.cora.ro/static/version1667889402/frontend/Exorigo/Cora/ro_RO/fonts/Coraicons/cora-icons.woff) format("woff");
+  font-weight: normal;
+  font-style : normal
+}
+
+/* ------------------------------ General -------------------------------------------*/
 body{
-  font-family: "Monserrat";
-  color: #111c8b !important;
+  font-family: 'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --main-color: #111c8b;
+  color: var(--main-color) !important;
   background-color: #f8fafc;
 }
 
 h3{
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 .flex-justify-center{
@@ -15,6 +97,23 @@ h3{
 
 
 /*------------------------------------------ Main cart ----------------------------------- */
+
+.cart-more-options{
+  display: none !important;
+}
+
+.product-item{
+  border-top: none !important;
+}
+
+.v-custom-product-item-wrap a{
+  max-width: 48px !important;
+}
+
+.v-custom-product-item-wrap img{
+  width: auto !important;
+}
+
 .container-cart{
   max-width: 1190px;
 }
@@ -34,6 +133,12 @@ h3{
 .summary-template-holder{
   width: 32.5% !important;
   padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-links.cart-links-bottom {
+  order: 2;
 }
 
 
@@ -52,8 +157,26 @@ h3{
   background-color: #def0f8 !important;
 }
 
+.icon-minus-sign,.icon-plus-sign{
+  display: flex !important;
+}
+
+.icon-minus-sign:hover{
+  color: #555 !important;
+}
+
 .icon-minus-sign::before{
-  content: '\e921' !important;
+  font-size: 26px !important;
+  content:"\e921" !important;
+  line-height: 25px !important;
+  color: var(--main-color) !important;
+  font-family: "cora-icons" !important;
+}
+.icon-plus-sign::before{
+  font-size: 26px !important;
+  content:"\e920" !important;
+  color: var(--main-color) !important;
+  font-family: "cora-icons" !important;
 }
 
 .cart-items div{
@@ -66,18 +189,32 @@ h3{
 }
 
 .v-custom-product-item-wrap .product-price{
+  display: flex !important;
   flex-direction: column;
 }
 
 .new-product-price{
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 .new-product-real-price-per-unit, .old-product-price{
   font-size: 11px;
   text-decoration: none;
+  color: var(--main-color);
+}
+.table.cart-items i.icon.icon-remove.item-remove-ico:before{
+  font-family: "cora-icons" !important;
+  content: '\e909';
+  font-size: 25px;
+}
+/*------------------------------------ summary section --------------------*/
+.totalizers-list{
+  border-bottom: none !important;
+  border-top: none !important;
 }
 
-/*------------------------------------ summary section --------------------*/
+.row-fluid.summary{
+  order: 1;
+}
 
 .summary-template-holder{
   background: transparent;
@@ -85,12 +222,24 @@ h3{
 
 #cart-to-orderform{
   border: none;
-  background: transparent linear-gradient(167deg,#111c8b 0,#e90027 100%);
+  background: transparent linear-gradient(167deg,var(--main-color) 0,#e90027 100%);
   padding: 9px 15px;
+  font-size: 0;
+  max-height: 40px;
+  transition: 1s ease !important;
+}
+
+#cart-to-orderform::after{
+  font-size: 14px;
+  content: "Continua catre finalizarea comenzii";
 }
 
 #cart-to-orderform:hover{
-  background: transparent linear-gradient(167deg,#e90027 0,#111c8b 100%);
+  background: transparent linear-gradient(167deg,#e90027 0,var(--main-color) 100%);
+}
+
+.accordion-inner{
+margin-top: 0 !important;
 }
 
 .clearfix.cart-links-bottom {
@@ -103,6 +252,10 @@ h3{
   flex-direction: column;
 }
 
+.summary-totalizers.cart-totalizers .accordion-group{
+background-color: #fff;
+}
+
 .forms.coupon-column{
   order: 1;
   background: #fff;
@@ -113,6 +266,8 @@ h3{
 .coupon_title h1{
   margin: 0 !important;
   padding: 20px 0 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 
 .coupon-label{
@@ -127,7 +282,7 @@ h3{
 
 .coupon-label label::after{
   content: "Introdu codul promotional";
-  font-size: 1rem;
+  font-size: 10px;
 }
 
 .coupon-form .coupon-fields{
@@ -137,31 +292,75 @@ h3{
 
 #cart-coupon{
   margin-right: 0 !important;
+  height: 36px !important;
+
+}
+
+#cart-coupon-add:hover{
+  background: transparent linear-gradient(167deg,#e90027 0,var(--main-color) 100%);
+  transition: 1s ease !important;
 }
 
 #cart-coupon-add{
   position: absolute;
   border-radius: 20px;
   right: 0%;
-  padding: 0 3.68rem;
+  padding: 0 3.8rem;
   font-size: 0 !important;
   color: #fff;
-  background: transparent linear-gradient(167deg,#111c8b 0,#e90027 100%);
+  background: transparent linear-gradient(167deg,var(--main-color) 0,#e90027 100%);
   border: none;
+  height: 36px;
+  transition: 1s ease !important;
 }
 
-#cart-coupon-add:hover{
-  background: transparent linear-gradient(167deg,#e90027 0,#111c8b 100%);
-}
+
 
 
 #cart-coupon-add::after{
   content: "Aplica";
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 700;
 }
 
+tfoot tr{
+  padding: 0 26px;
+}
 
+tfoot .info{
+  font-size: 0 !important;
+  padding-left: 26px !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+tfoot .info::before{
+  font-size: 16px !important;
+  content: "Total comanda cu taxe incluse";
+}
+
+.srp-summary-result{
+  padding: 11px 25px !important;
+}
+
+.srp-summary-result .info{
+  font-size: 0 !important;
+}
+
+.srp-summary-result .info::after{
+  font-size: 14px;
+  content: "Livrare";
+}
+
+
+tfoot .monetary{
+  color: var(--main-color) !important;
+  font-size: 20px !important;
+}
+
+tr.Items{
+  padding: 0 25px !important;
+}
 
 /*------------------------------------- Terms and conditions section -------------------------- */
 
@@ -170,6 +369,7 @@ h3{
   width: 100%;
   margin-top: 1.25rem;
   border-radius: 20px;
+  order: 3;
 }
 
 .terms_and_conditions .main_column{
@@ -185,6 +385,10 @@ h3{
   margin-bottom: 1rem;
 }
 
+.terms_list li a{
+    color: var(--main-color);
+}
+
 .terms_list li::marker{
   unicode-bidi: isolate;
   font-variant-numeric: tabular-nums;
@@ -196,7 +400,7 @@ h3{
 
 .terms_action_btn{
   color: #fff;
-  background: transparent linear-gradient(167deg,#111c8b 0,#e90027 100%);
+  background: transparent linear-gradient(167deg,var(--main-color) 0,#e90027 100%);
   text-decoration: none;
   font-size: 12px!important;
   min-width: 160px!important;
@@ -211,5 +415,5 @@ h3{
 .terms_action_btn:hover{
   color: #fff;
   text-decoration: none;
-  background: transparent linear-gradient(167deg,#e90027 0,#111c8b 100%);
+  background: transparent linear-gradient(167deg,#e90027 0,var(--main-color) 100%);
 }

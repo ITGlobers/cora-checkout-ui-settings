@@ -2,9 +2,16 @@ let termsAndConditions = {
   init: function () {
     const summaryTemplate = $('.summary-template-holder')
 
-    // $('.row-fluid.summary').remove($('.forms.coupon-column'))
+    $('.v-custom-product-item-wrap .product-price').attr('id', 'cart_product--price')
+    // Remove all visible table headings
+    $('.table.cart-items').find('.product').remove()
+    $('.table.cart-items').find('.product-price').remove()
+    $('.table.cart-items').find('.quantity').remove()
 
-    $('.forms.coupon-column').prepend(`<div class="coupon_title>"><h1>Cod promotional</h1></div>`)
+    $('input#cart-coupon').attr('placeholder', 'XXXXXXX')
+
+    // Add title to cupon section
+    $('.forms.coupon-column').prepend(`<div class="coupon_title"><h1>Cod promotional</h1></div>`)
 
     summaryTemplate.append(`<div class="terms_and_conditions">
     <div class="main_column">
@@ -35,7 +42,9 @@ let termsAndConditions = {
 }
 
 $(document).on('ready', function () {
-  setTimeout(() => {
-    termsAndConditions.init()
-  }, 1000)
+  if (window.location.hash === '#/cart') {
+    setTimeout(() => {
+      termsAndConditions.init()
+    }, 1000)
+  }
 })
