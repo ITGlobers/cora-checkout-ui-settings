@@ -1,0 +1,215 @@
+body{
+  font-family: "Monserrat";
+  color: #111c8b !important;
+  background-color: #f8fafc;
+}
+
+h3{
+  font-size: 1.6rem;
+}
+
+.flex-justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+
+/*------------------------------------------ Main cart ----------------------------------- */
+.container-cart{
+  max-width: 1190px;
+}
+
+.product-name:hover{
+  text-decoration: underline;
+}
+
+#cart-coupon{
+  border-radius: 20px;
+}
+
+.cart-template-holder{
+  width: 66% !important;
+}
+
+.summary-template-holder{
+  width: 32.5% !important;
+  padding: 0 !important;
+}
+
+
+.item-unit-label{
+  display: none;
+}
+
+#item-quantity-999980180{
+  border-radius: 20px !important;
+  background-color: #def0f8 !important;
+}
+
+.product-item .quantity{
+  margin: 0 2rem 0 0 !important;
+  border-radius: 20px !important;
+  background-color: #def0f8 !important;
+}
+
+.icon-minus-sign::before{
+  content: '\e921' !important;
+}
+
+.cart-items div{
+  display: none;
+}
+
+.v-custom-product-item-wrap .best-price{
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.v-custom-product-item-wrap .product-price{
+  flex-direction: column;
+}
+
+.new-product-price{
+  font-size: 1.4rem;
+}
+.new-product-real-price-per-unit, .old-product-price{
+  font-size: 11px;
+  text-decoration: none;
+}
+
+/*------------------------------------ summary section --------------------*/
+
+.summary-template-holder{
+  background: transparent;
+}
+
+#cart-to-orderform{
+  border: none;
+  background: transparent linear-gradient(167deg,#111c8b 0,#e90027 100%);
+  padding: 9px 15px;
+}
+
+#cart-to-orderform:hover{
+  background: transparent linear-gradient(167deg,#e90027 0,#111c8b 100%);
+}
+
+.clearfix.cart-links-bottom {
+  background: #fff;
+  padding: 16px;
+  margin-top: 5px;
+}
+.summary-totalizers.cart-totalizers{
+  display: flex;
+  flex-direction: column;
+}
+
+.forms.coupon-column{
+  order: 1;
+  background: #fff;
+  margin: 5px 0;
+  padding: 14px 0;
+}
+
+.coupon_title h1{
+  margin: 0 !important;
+  padding: 20px 0 !important;
+}
+
+.coupon-label{
+  display: inline !important;
+  text-align: left;
+}
+
+.coupon-label label{
+  padding-left: 3rem;
+  font-size: 0 !important;
+}
+
+.coupon-label label::after{
+  content: "Introdu codul promotional";
+  font-size: 1rem;
+}
+
+.coupon-form .coupon-fields{
+  width: 332px;
+  margin: 0 auto !important;
+}
+
+#cart-coupon{
+  margin-right: 0 !important;
+}
+
+#cart-coupon-add{
+  position: absolute;
+  border-radius: 20px;
+  right: 0%;
+  padding: 0 3.68rem;
+  font-size: 0 !important;
+  color: #fff;
+  background: transparent linear-gradient(167deg,#111c8b 0,#e90027 100%);
+  border: none;
+}
+
+#cart-coupon-add:hover{
+  background: transparent linear-gradient(167deg,#e90027 0,#111c8b 100%);
+}
+
+
+#cart-coupon-add::after{
+  content: "Aplica";
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+
+
+/*------------------------------------- Terms and conditions section -------------------------- */
+
+.terms_and_conditions{
+  background: #fff;
+  width: 100%;
+  margin-top: 1.25rem;
+  border-radius: 20px;
+}
+
+.terms_and_conditions .main_column{
+  padding: 10px 40px;
+}
+
+.terms_list{
+  margin: 0 0 10px 0px !important;
+  padding-left: 34px;
+}
+
+.terms_list li{
+  margin-bottom: 1rem;
+}
+
+.terms_list li::marker{
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.terms_action_btn{
+  color: #fff;
+  background: transparent linear-gradient(167deg,#111c8b 0,#e90027 100%);
+  text-decoration: none;
+  font-size: 12px!important;
+  min-width: 160px!important;
+  font-weight: 700!important;
+  box-shadow: 0 3px 6px #00000029!important;
+  padding: 7px 15px!important;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.terms_action_btn:hover{
+  color: #fff;
+  text-decoration: none;
+  background: transparent linear-gradient(167deg,#e90027 0,#111c8b 100%);
+}
