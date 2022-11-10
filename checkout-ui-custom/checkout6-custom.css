@@ -56,6 +56,14 @@ h3 {
   display: none !important;
 }
 
+.icon-remove.item-remove-ico {
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  width: auto;
+  padding: 8px 16px;
+  position: relative;
+}
+
 .product-item {
   border-top: none !important;
 }
@@ -168,6 +176,9 @@ td.quantity input {
   font-family: 'cora-icons' !important;
   font-size: 25px;
   color: var(--main-color);
+  position: absolute;
+  left: 13%;
+  top: 9%;
 }
 
 /*------------------------------------ summary section --------------------*/
