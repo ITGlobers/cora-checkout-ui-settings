@@ -18,6 +18,7 @@ let termsAndConditions = {
     // Add title to cupon section
     $('.forms.coupon-column').prepend(`<div class="coupon_title"><h1>Cod promotional</h1></div>`)
 
+    // Adding terms and conditions section
     summaryTemplate.append(`<div class="terms_and_conditions">
     <div class="main_column">
       <div class="text_wrapper">
@@ -46,10 +47,24 @@ let termsAndConditions = {
   },
 }
 
+let emptyCart = {
+  init: function () {
+    const tableHead = $('.cart-items thead tr')
+
+    tableHead.append(`
+    <th class="remove-all">
+      <div class="icon-container" style="display:flex">
+        <span class="trash-icon"></span><span class="removeall-text">Sterge tot cosul</span>
+      </div>
+    <th>`)
+  },
+}
+
 $(document).on('ready', function () {
   if (window.location.hash === '#/cart') {
     setTimeout(() => {
       termsAndConditions.init()
+      emptyCart.init()
     }, 1000)
   }
 })
