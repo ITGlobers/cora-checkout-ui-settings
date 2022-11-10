@@ -88,6 +88,11 @@ h3 {
   width: 66% !important;
 }
 
+td.quantity input {
+  border-radius: 20px !important;
+  background-color: #def0f8 !important;
+}
+
 .summary-template-holder {
   width: 32.5% !important;
   padding: 0 !important;
@@ -101,11 +106,6 @@ h3 {
 
 .item-unit-label {
   display: none;
-}
-
-#item-quantity-999980180 {
-  border-radius: 20px !important;
-  background-color: #def0f8 !important;
 }
 
 .product-item .quantity {
