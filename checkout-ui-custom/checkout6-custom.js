@@ -51,12 +51,19 @@ let emptyCart = {
   init: function () {
     const tableHead = $('.cart-items thead tr')
 
-    tableHead.append(`
-    <th class="remove-all">
-      <div class="icon-container" style="display:flex">
-        <span class="trash-icon"></span><span class="removeall-text">Sterge tot cosul</span>
-      </div>
-    <th>`)
+    // Create icon to remove all items
+    if (window?.vtexjs?.checkout?.orderForm?.items.length > 0) {
+      tableHead.append(`
+      <th class="remove-all">
+        <div class="icon-container" style="display:flex">
+          <span class="trash-icon"></span><span class="removeall-text">Sterge tot cosul</span>
+        </div>
+      <th>`)
+
+      $('div.icon-container').on('click', function () {
+        window.vtexjs.checkout.removeAllItems()
+      })
+    }
   },
 }
 
