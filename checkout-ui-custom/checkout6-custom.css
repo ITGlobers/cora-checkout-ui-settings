@@ -130,6 +130,7 @@ h3 {
   content    : '\e909';
   font-family: "cora-icons" !important;
   font-size  : 25px;
+  color: var(--main-color);
 }
 
 /*------------------------------------ summary section --------------------*/

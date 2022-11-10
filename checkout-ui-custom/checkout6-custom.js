@@ -1,5 +1,10 @@
 let termsAndConditions = {
   init: function () {
+    const orderForm = Object.assign(window.vtexjs.checkout.orderForm)
+
+    $('.container.container-main').prepend(`<h1 style="font-size:20px !important" class="cart-header">Cosul tau
+    (${orderForm.items.length} produs)</h1>`)
+
     const summaryTemplate = $('.summary-template-holder')
 
     $('.v-custom-product-item-wrap .product-price').attr('id', 'cart_product--price')
