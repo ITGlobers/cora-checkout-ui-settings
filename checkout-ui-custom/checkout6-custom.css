@@ -187,7 +187,7 @@ td.quantity input {
 .table.cart-items i.icon.icon-remove.item-remove-ico::before {
   content: '\e909';
   font-family: 'cora-icons' !important;
-  font-size: 25px;
+  font-size: 22px;
   color: var(--main-color);
   position: absolute;
   left: 13%;
@@ -217,6 +217,7 @@ td.quantity input {
   font-size: 14px;
   font-weight: 700;
   color: #fff;
+  border-radius: 20px;
 }
 
 #cart-to-orderform:hover {
@@ -423,7 +424,10 @@ tr.Items {
   }
 }
 
-@media screen and(max-width: 690px) {
+@media screen and (max-width: 690px) {
+  .cart-links.cart-links-bottom {
+    width: 95% !important;
+  }
 }
 
 /* -------------------------------------- Profile section ----------------------------*/
