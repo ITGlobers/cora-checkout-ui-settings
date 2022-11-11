@@ -100,6 +100,7 @@ $(document).on('ready', function () {
 })
 
 $(window).on('hashchange', function () {
+  shoppingCart.header.init()
   if (window.location.hash !== '#/cart') {
     $('div.terms_and_conditions').remove()
     shoppingCart.summaryTemplate.init()
