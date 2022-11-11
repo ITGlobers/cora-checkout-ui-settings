@@ -16,7 +16,7 @@ h3 {
 }
 
 .info {
-  color: var(--main-color);
+  color: var(--main-color) !important;
   font-size: 13px;
 }
 
@@ -200,6 +200,10 @@ td.quantity input {
   border-top: none !important;
 }
 
+.coupon_title h1 {
+  text-align: center;
+}
+
 .row-fluid.summary {
   order: 1;
 }
@@ -210,12 +214,7 @@ td.quantity input {
   padding: 9px 15px;
   max-height: 40px;
   transition: 1s ease !important;
-  font-size: 0px !important;
-}
-
-#cart-to-orderform::after {
   font-size: 14px;
-  content: 'Continua catre finalizarea comenzii';
   font-weight: 700;
   color: #fff;
 }
@@ -295,13 +294,8 @@ td.quantity input {
   color: #fff;
   background: transparent linear-gradient(167deg, var(--main-color) 0, #e90027 100%);
   border: none;
-  height: 36px;
+  height: 36px !important;
   transition: 1s ease !important;
-  font-size: 0px !important;
-}
-
-#cart-coupon-add::after {
-  content: 'Aplica';
   font-size: 14px;
   font-weight: 700;
 }
@@ -335,8 +329,14 @@ tfoot .info::before {
   content: 'Livrare';
 }
 
+.product-name,
+.description,
+.monetary,
 tfoot .monetary {
   color: var(--main-color) !important;
+}
+
+tfoot .monetary {
   font-size: 20px !important;
 }
 
@@ -424,4 +424,64 @@ tr.Items {
 }
 
 @media screen and(max-width: 690px) {
+}
+
+/* -------------------------------------- Profile section ----------------------------*/
+.is-corporate-client {
+  color: var(--main-color) !important;
+}
+
+/*------------------------------------- Email tab ---------------------------------------*/
+#btn-go-to-payment,
+.btn-submit-wrapper #go-to-shipping {
+  background: transparent linear-gradient(167deg, var(--main-color) 0, #e90027 100%);
+  font-weight: 700;
+}
+
+.summary-template-holder.summary-email {
+  width: 100% !important;
+}
+
+.client-phone label,
+.client-last-name label,
+.client-first-name label,
+.client-email label {
+  color: var(--main-color) !important;
+}
+
+.product-name {
+  max-width: 12rem;
+}
+
+/*------------------------------------- Shipping tab ---------------------------------------*/
+.vtex-omnishipping-1-x-linkEdit,
+.shp-option-text-label,
+.vtex-omnishipping-1-x-shippingSectionTitle,
+.ship-receiverName label,
+.ship-complement label,
+.ship-checkboxNumberLabel label,
+.ship-number label,
+.delivery-address-title {
+  color: var(--main-color) !important;
+}
+.shp-method-option-active {
+  background-color: var(--main-color);
+}
+
+.vtex-omnishipping-1-x-deliveryGroup {
+  margin-bottom: 2rem;
+}
+
+/* -------------------------------------- Payment section -------------------------*/
+.orderform-template .cart-template.mini-cart .cart {
+  max-height: none !important;
+}
+
+#payment-data-submit {
+  background: transparent linear-gradient(167deg, var(--main-color) 0, #e90027 100%);
+}
+
+.ChangeNumberOfPayments a,
+.FormFieldLabel {
+  color: var(--main-color) !important;
 }

@@ -79,6 +79,12 @@ let shoppingCart = {
       header.addClass('header-container')
     },
   },
+
+  summaryTemplate: {
+    init: function () {
+      $('.summary-template-holder').addClass('summary-email')
+    },
+  },
 }
 
 $(document).on('ready', function () {
@@ -96,7 +102,15 @@ $(document).on('ready', function () {
 $(window).on('hashchange', function () {
   if (window.location.hash !== '#/cart') {
     $('div.terms_and_conditions').remove()
+    shoppingCart.summaryTemplate.init()
   } else {
     shoppingCart.termsAndConditions.init()
+    $('.summary-template-holder.summary-email').removeClass('summary-email')
+  }
+})
+
+$(window).on('ready', function () {
+  if (window.location.hash === '#/email') {
+    shoppingCart.summaryTemplate.init()
   }
 })
