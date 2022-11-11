@@ -1,245 +1,231 @@
-/* ----------------------------- Font-families --------------------------------------*/
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 400;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 250;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Thin.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 275;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-ExtraLight.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 300;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 500;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 600;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-SemiBold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 700;
-  src        : local("Montserrat"),
-    url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 800;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-ExtraBold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-style : normal;
-  font-weight: 900;
-  src        : local("Montserrat"),
-    url("https://fonts.cdnfonts.com/s/14883/Montserrat-Black.woff") format("woff");
-}
-
-@font-face {
-  font-family: "cora-icons";
-  src        : url(https://www.cora.ro/static/version1667889402/frontend/Exorigo/Cora/ro_RO/fonts/Coraicons/cora-icons.woff) format("woff");
-  font-weight: normal;
-  font-style : normal
-}
-
 /* ------------------------------ General -------------------------------------------*/
-body{
-  font-family: 'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif;
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --main-color: #111c8b;
   color: var(--main-color) !important;
   background-color: #f8fafc;
 }
 
-h3{
+h3 {
   font-size: 16px;
 }
 
-.flex-justify-center{
+.flex-justify-center {
   display: flex;
   justify-content: center;
 }
 
+.info {
+  color: var(--main-color);
+  font-size: 13px;
+}
+
+/*---------------------------------------- Remove all products --------------------------- */
+
+.remove-all {
+  height: 20px;
+  width: 100%;
+}
+
+.remove-all .icon-container {
+  float: right;
+  align-items: center;
+  background: #f4fafd;
+  border-radius: 20px;
+  padding: 0 29px;
+}
+
+.remove-all .icon-container:hover {
+  cursor: pointer;
+}
+
+.icon-container .trash-icon {
+  margin-right: 2px;
+}
+
+.icon-container .trash-icon::after {
+  content: '\e909';
+  font-size: 18px;
+  color: var(--main-color);
+  font-family: 'cora-icons' !important;
+}
+
+.removeall-text {
+  font-family: 'Montserrat';
+  font-size: 11px;
+}
 
 /*------------------------------------------ Main cart ----------------------------------- */
 
-.cart-more-options{
-  display: none !important;
-}
-
-.product-item{
-  border-top: none !important;
-}
-
-.v-custom-product-item-wrap a{
-  max-width: 48px !important;
-}
-
-.v-custom-product-item-wrap img{
-  width: auto !important;
-}
-
-.container-cart{
+.header-container {
+  margin-top: 2rem;
+  margin-left: auto;
   max-width: 1190px;
 }
 
-.product-name:hover{
+.cart-more-options {
+  display: none !important;
+}
+
+.icon-remove.item-remove-ico {
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  width: auto;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.product-item {
+  border-top: none !important;
+}
+
+.table.cart-items thead tr th:nth-child(5) {
+  padding: 0;
+}
+
+.v-custom-product-item-wrap a {
+  max-width: 48px !important;
+}
+
+.v-custom-product-item-wrap img {
+  width: auto !important;
+}
+
+.container-cart {
+  max-width: 1190px;
+}
+
+.product-name:hover {
   text-decoration: underline;
 }
 
-#cart-coupon{
+#cart-coupon {
   border-radius: 20px;
 }
 
-.cart-template-holder{
+.cart-template-holder {
   width: 66% !important;
 }
 
-.summary-template-holder{
+td.quantity input {
+  border-radius: 20px !important;
+  background-color: #def0f8 !important;
+}
+
+.summary-template-holder {
   width: 32.5% !important;
   padding: 0 !important;
   display: flex;
   flex-direction: column;
+  background: transparent;
+  margin-top: 0 !important;
 }
 
 .cart-links.cart-links-bottom {
   order: 2;
 }
 
-
-.item-unit-label{
+.item-unit-label {
   display: none;
 }
 
-#item-quantity-999980180{
-  border-radius: 20px !important;
-  background-color: #def0f8 !important;
-}
-
-.product-item .quantity{
+.product-item .quantity {
   margin: 0 2rem 0 0 !important;
   border-radius: 20px !important;
   background-color: #def0f8 !important;
 }
 
-.icon-minus-sign,.icon-plus-sign{
+.icon-minus-sign,
+.icon-plus-sign {
   display: flex !important;
 }
 
-.icon-minus-sign:hover{
+.icon-minus-sign:hover {
   color: #555 !important;
 }
 
-.icon-minus-sign::before{
+.icon-minus-sign::before {
   font-size: 26px !important;
-  content:"\e921" !important;
+  content: '\e921' !important;
   line-height: 25px !important;
   color: var(--main-color) !important;
-  font-family: "cora-icons" !important;
-}
-.icon-plus-sign::before{
-  font-size: 26px !important;
-  content:"\e920" !important;
-  color: var(--main-color) !important;
-  font-family: "cora-icons" !important;
+  font-family: 'cora-icons' !important;
 }
 
-.cart-items div{
+.icon-plus-sign::before {
+  font-size: 26px !important;
+  content: '\e920' !important;
+  color: var(--main-color) !important;
+  font-family: 'cora-icons' !important;
+}
+
+.cart-items div {
   display: none;
 }
 
-.v-custom-product-item-wrap .best-price{
+.v-custom-product-item-wrap .best-price {
   display: flex !important;
   flex-direction: column !important;
 }
 
-.v-custom-product-item-wrap .product-price{
+.v-custom-product-item-wrap .product-price {
   display: flex !important;
   flex-direction: column;
 }
 
-.new-product-price{
+.new-product-price {
   font-size: 14px;
 }
-.new-product-real-price-per-unit, .old-product-price{
+
+.new-product-real-price-per-unit,
+.old-product-price {
   font-size: 11px;
   text-decoration: none;
   color: var(--main-color);
 }
-.table.cart-items i.icon.icon-remove.item-remove-ico:before{
-  font-family: "cora-icons" !important;
+
+.table.cart-items i.icon.icon-remove.item-remove-ico::before {
   content: '\e909';
+  font-family: 'cora-icons' !important;
   font-size: 25px;
+  color: var(--main-color);
+  position: absolute;
+  left: 13%;
+  top: 9%;
 }
+
 /*------------------------------------ summary section --------------------*/
-.totalizers-list{
+.totalizers-list {
   border-bottom: none !important;
   border-top: none !important;
 }
 
-.row-fluid.summary{
+.row-fluid.summary {
   order: 1;
 }
 
-.summary-template-holder{
-  background: transparent;
-}
-
-#cart-to-orderform{
+#cart-to-orderform {
   border: none;
-  background: transparent linear-gradient(167deg,var(--main-color) 0,#e90027 100%);
+  background: transparent linear-gradient(167deg, var(--main-color) 0, #e90027 100%);
   padding: 9px 15px;
-  font-size: 0;
   max-height: 40px;
   transition: 1s ease !important;
+  font-size: 0px !important;
 }
 
-#cart-to-orderform::after{
+#cart-to-orderform::after {
   font-size: 14px;
-  content: "Continua catre finalizarea comenzii";
+  content: 'Continua catre finalizarea comenzii';
+  font-weight: 700;
+  color: #fff;
 }
 
-#cart-to-orderform:hover{
-  background: transparent linear-gradient(167deg,#e90027 0,var(--main-color) 100%);
+#cart-to-orderform:hover {
+  background: transparent linear-gradient(167deg, #e90027 0, var(--main-color) 100%);
 }
 
-.accordion-inner{
-margin-top: 0 !important;
+.accordion-inner {
+  margin-top: 0 !important;
 }
 
 .clearfix.cart-links-bottom {
@@ -247,124 +233,120 @@ margin-top: 0 !important;
   padding: 16px;
   margin-top: 5px;
 }
-.summary-totalizers.cart-totalizers{
+
+.summary-totalizers.cart-totalizers {
   display: flex;
   flex-direction: column;
 }
 
-.summary-totalizers.cart-totalizers .accordion-group{
-background-color: #fff;
+.summary-totalizers.cart-totalizers .accordion-group {
+  background-color: #fff;
 }
 
-.forms.coupon-column{
+.forms.coupon-column {
   order: 1;
   background: #fff;
   margin: 5px 0;
   padding: 14px 0;
 }
 
-.coupon_title h1{
+.coupon_title h1 {
   margin: 0 !important;
   padding: 20px 0 !important;
   font-size: 16px !important;
   font-weight: 500 !important;
 }
 
-.coupon-label{
+.coupon-label {
   display: inline !important;
   text-align: left;
 }
 
-.coupon-label label{
+.coupon-label label {
   padding-left: 3rem;
   font-size: 0 !important;
 }
 
-.coupon-label label::after{
-  content: "Introdu codul promotional";
+.coupon-label label::after {
+  content: 'Introdu codul promotional';
   font-size: 10px;
 }
 
-.coupon-form .coupon-fields{
-  width: 332px;
+.coupon-form .coupon-fields {
+  width: 90%;
   margin: 0 auto !important;
 }
 
-#cart-coupon{
+#cart-coupon {
   margin-right: 0 !important;
   height: 36px !important;
-
 }
 
-#cart-coupon-add:hover{
-  background: transparent linear-gradient(167deg,#e90027 0,var(--main-color) 100%);
+#cart-coupon-add:hover {
+  background: transparent linear-gradient(167deg, #e90027 0, var(--main-color) 100%);
   transition: 1s ease !important;
 }
 
-#cart-coupon-add{
+#cart-coupon-add {
   position: absolute;
   border-radius: 20px;
   right: 0%;
   padding: 0 3.8rem;
-  font-size: 0 !important;
   color: #fff;
-  background: transparent linear-gradient(167deg,var(--main-color) 0,#e90027 100%);
+  background: transparent linear-gradient(167deg, var(--main-color) 0, #e90027 100%);
   border: none;
   height: 36px;
   transition: 1s ease !important;
+  font-size: 0px !important;
 }
 
-
-
-
-#cart-coupon-add::after{
-  content: "Aplica";
+#cart-coupon-add::after {
+  content: 'Aplica';
   font-size: 14px;
   font-weight: 700;
 }
 
-tfoot tr{
+tfoot tr {
   padding: 0 26px;
 }
 
-tfoot .info{
+tfoot .info {
   font-size: 0 !important;
   padding-left: 26px !important;
   font-weight: 400 !important;
   text-align: left !important;
 }
 
-tfoot .info::before{
+tfoot .info::before {
   font-size: 16px !important;
-  content: "Total comanda cu taxe incluse";
+  content: 'Total comanda cu taxe incluse';
 }
 
-.srp-summary-result{
+.srp-summary-result {
   padding: 11px 25px !important;
 }
 
-.srp-summary-result .info{
+.srp-summary-result .info {
   font-size: 0 !important;
 }
 
-.srp-summary-result .info::after{
+.srp-summary-result .info::after {
   font-size: 14px;
-  content: "Livrare";
+  content: 'Livrare';
 }
 
-
-tfoot .monetary{
+tfoot .monetary {
   color: var(--main-color) !important;
   font-size: 20px !important;
 }
 
-tr.Items{
+tr.Items {
   padding: 0 25px !important;
 }
 
 /*------------------------------------- Terms and conditions section -------------------------- */
 
-.terms_and_conditions{
+.terms_and_conditions {
   background: #fff;
   width: 100%;
   margin-top: 1.25rem;
@@ -372,24 +354,24 @@ tr.Items{
   order: 3;
 }
 
-.terms_and_conditions .main_column{
+.terms_and_conditions .main_column {
   padding: 10px 40px;
 }
 
-.terms_list{
+.terms_list {
   margin: 0 0 10px 0px !important;
   padding-left: 34px;
 }
 
-.terms_list li{
+.terms_list li {
   margin-bottom: 1rem;
 }
 
-.terms_list li a{
-    color: var(--main-color);
+.terms_list li a {
+  color: var(--main-color);
 }
 
-.terms_list li::marker{
+.terms_list li::marker {
   unicode-bidi: isolate;
   font-variant-numeric: tabular-nums;
   text-transform: none;
@@ -398,22 +380,48 @@ tr.Items{
   text-align-last: start !important;
 }
 
-.terms_action_btn{
+.terms_action_btn {
   color: #fff;
-  background: transparent linear-gradient(167deg,var(--main-color) 0,#e90027 100%);
+  background: transparent linear-gradient(167deg, var(--main-color) 0, #e90027 100%);
   text-decoration: none;
-  font-size: 12px!important;
-  min-width: 160px!important;
-  font-weight: 700!important;
-  box-shadow: 0 3px 6px #00000029!important;
-  padding: 7px 15px!important;
+  font-size: 12px !important;
+  min-width: 160px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 3px 6px #00000029 !important;
+  padding: 7px 15px !important;
   margin: 0 10px 10px 0;
   border-radius: 20px;
   text-align: center;
 }
 
-.terms_action_btn:hover{
+.terms_action_btn:hover {
   color: #fff;
   text-decoration: none;
-  background: transparent linear-gradient(167deg,#e90027 0,var(--main-color) 100%);
+  background: transparent linear-gradient(167deg, #e90027 0, var(--main-color) 100%);
+}
+
+/* ---------------------------------- 990px ---------------------------------------------*/
+
+@media screen and (max-with: 998px) {
+  .summary-template-holder {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .cart-template.full-cart {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .cart-template-holder {
+    width: 100% !important;
+  }
+
+  .summary-template-holder {
+    width: 100% !important;
+  }
+}
+
+@media screen and(max-width: 690px) {
 }
