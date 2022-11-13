@@ -188,7 +188,7 @@ td.quantity input {
 }
 
 .table.cart-items i.icon.icon-remove.item-remove-ico::before {
-  content    : '\e909';
+  content    : '\e909' !important;
   font-family: 'cora-icons' !important;
   font-size  : 22px;
   color      : var(--main-color);
